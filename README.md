@@ -10,19 +10,21 @@ The following technologies have been used to build this demo application.
 	
 
 The application has the following functionalities with the following constraints:- 
- - **Deposit**
+
+ **Deposit**
  
-	■ Max deposit for the day = $150K
+ 	■ Max deposit for the day = $150K
 	■ Max deposit per transaction = $40K
 	■ Max deposit frequency = 4 transactions/day
 	
- - **Withdraw**
+ **Withdraw**
  
 	■ Max withdrawal for the day = $50K
 	■ Max withdrawal per transaction = $20K
 	■ Max withdrawal frequency = 3 transactions/day
 	■ Cannot withdraw when balance is less than withdrawal amount
- - **Query balance**
+	
+ **Query balance**
  
 ##### Run instructions
  
@@ -30,12 +32,12 @@ The application has the following functionalities with the following constraints
 
  1. tests run 
  
-	■ mvn
+	■ mvn clean test
 	
  
  2. the application 
  
-	■ mvn
+	■ to do
 	
  
 
