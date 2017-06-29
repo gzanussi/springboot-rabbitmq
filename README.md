@@ -7,6 +7,8 @@ The following technologies have been used to build this demo application.
 	■ Java 1.8
 	■ Maven
 	■ Springboot
+	■ Jacoco plugin - for code coverage
+	
 	
 
 The application has the following functionalities with the following constraints:- 
@@ -27,19 +29,31 @@ The application has the following functionalities with the following constraints
  **Query balance**
  
 ##### Run instructions
+
+Create a database and user to access the database with.
+
+	create database bank;
+	create user 'banker'@'localhost' identified by 'banker'; -- Creates the user
+    grant all on bank.* to 'banker'@'localhost'; 
+    
+   Sample call to add a new account 
+   
+    curl 'localhost:8080/accounts/add?number=121312131&name=omari&type=Credit'
+    
  
  In order to run the 
 
  1. tests run 
  
-	■ mvn clean test
+	■ mvn test
 	
  
  2. the application 
  
-	■ to do
+	■ mvn spring-boot:run
 	
- 
+	
+	
 
  
  

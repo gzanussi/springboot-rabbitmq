@@ -1,16 +1,26 @@
 package com.microwebservice.domain;
 
-import javax.xml.bind.annotation.XmlRootElement;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-@XmlRootElement
-@JsonIgnoreProperties(ignoreUnknown=true)
+@Entity
 public class Account {
-	double balance;
-	String name;
-	String number;
-	String type;
-	String status;
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private Integer id;
+    private double balance = 0.00;
+	private String name;
+	private String number;
+	private String type;
+	private String status = "active";
+	
+	public Account() {
+		status = "inactive";
+		balance = 0.00;
+	}
 	
 	public double getBalance() {
 		return balance;
@@ -35,5 +45,11 @@ public class Account {
 	}
 	public void setAccountNumber(String accountNumber) {
 		this.number = accountNumber;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
 	}
 }
