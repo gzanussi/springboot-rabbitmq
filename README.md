@@ -8,6 +8,7 @@ The following technologies have been used to build this demo application.
 	■ Maven
 	■ Springboot
 	■ Jacoco plugin - for code coverage
+	■ MySQL Ver 14.14 
 	
 	
 
@@ -30,7 +31,7 @@ The application has the following functionalities with the following constraints
  
 ##### Run instructions
 
-Create a database and user to access the database with.
+Start mysql and create a database and user to access the database with.
 
 	create database bank;
 	create user 'banker'@'localhost' identified by 'banker'; -- Creates the user

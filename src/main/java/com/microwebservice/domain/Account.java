@@ -11,15 +11,20 @@ public class Account {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
-    private double balance = 0.00;
+   
 	private String name;
+	
+	@Column(unique = true)
 	private String number;
+	
 	private String type;
-	private String status = "active";
+    private double balance;
+	private String status;
+	
 	
 	public Account() {
-		status = "inactive";
-		balance = 0.00;
+		this.status = "inactive";
+		this.balance = 0.00;
 	}
 	
 	public double getBalance() {
