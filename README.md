@@ -9,6 +9,7 @@ The following technologies have been used to build this demo application.
 	■ Springboot
 	■ Jacoco plugin - for code coverage
 	■ MySQL Ver 14.14 
+	■ RabbitMQ 
 	
 	
 
