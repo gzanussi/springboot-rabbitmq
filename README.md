@@ -11,15 +11,17 @@ The following technologies have been used to build this demo application.
 	■ MySQL Ver 14.14 
 	■ RabbitMQ 
 	
-	
+NB: An internet connection is required to run this application.	
 
 The application has the following functionalities with the following constraints:- 
 
  **Deposit**
- 
- 	■ Max deposit for the day = $150K
+	
+	■ Max deposit for the day = $150K
 	■ Max deposit per transaction = $40K
+	■ Max withdrawal frequency = 3 transactions/day
 	■ Max deposit frequency = 4 transactions/day
+	
 	
  **Withdraw**
  
@@ -45,12 +47,12 @@ Start mysql and create a database and user to access the database with.
  
  In order to run the 
 
- 1. tests run 
+ - tests run 
  
 	■ mvn test
 	
  
- 2. the application 
+ - the application 
  
 	■ mvn spring-boot:run
 	

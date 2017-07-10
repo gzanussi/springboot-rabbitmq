@@ -26,21 +26,30 @@ public class AccountController {
 	@RequestMapping("/all")
 	public List<Account> getAll() {
 		List<Account> accounts = (ArrayList<Account>) accountRepository.findAll();
+		if(accounts == null) {
+		}
 		return accounts;
 	}
 	
-	@RequestMapping("{id}") 
+	@RequestMapping("{id}")
 	public Account getAccount(@PathVariable("id") String id){
-		return accountService.getAccount(id);
+		Account response  = accountService.getAccount(id);
+//		if(response == null) throw new AccountNotFoundException();
+		return response;
 	}
 	
 	@RequestMapping(path="/add")
 	public @ResponseBody String addNewUser(@RequestParam String number, @RequestParam String name, @RequestParam String type) {
-		Account n = new Account();
-		n.setAccountName(name);
-		n.setAccountType(type);
-		n.setAccountNumber(number);
-		accountRepository.save(n);
+		Account account = new Account();
+		account.setAccountName(name);
+		account.setAccountType(type);
+		account.setAccountNumber(number);
+		accountRepository.save(account);
 		return "Successfuly saved!!";
 	}
+	
+//	@ResponseStatus(value=HttpStatus.NOT_FOUND, reason="No such Account")  // 404
+//	 public class AccountNotFoundException extends RuntimeException {
+//	    
+//	 }
 }
