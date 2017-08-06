@@ -20,6 +20,8 @@ public class Account {
 	private String type;
     private double balance;
 	private String status;
+	private boolean messageReceived;
+	private Integer messageCount = 0; //init to zero
 	
 	public Account() {
 		this.status = "inactive";
@@ -65,4 +67,20 @@ public class Account {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	
+    public boolean isMessageReceived() {
+        return messageReceived;
+    }
+
+    public void setMessageReceived(boolean messageReceived) {
+        this.messageReceived = messageReceived;
+    }
+
+    public Integer getMessageCount() {
+        return messageCount;
+    }
+
+    public void setMessageCount(Integer messageCount) {
+        this.messageCount = messageCount;
+    }
 }
