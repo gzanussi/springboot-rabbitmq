@@ -1,5 +1,5 @@
-#### REST Demo
-A simple application to demonstrate how to build a Bank Account web service using Spring boot as well as Message Queuing using RabbitMQ.
+#### Springboot-RabbitMQ
+A simple application to demonstrate how to build a Java web service using Spring boot as well as Message Queuing using RabbitMQ.
 
 ##### Technologies used
 The following technologies have been used to build this demo application.
