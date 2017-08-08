@@ -42,17 +42,17 @@ Start mysql and create a database and user to access the database with.
     
    Sample call to add a new account 
    
-    curl 'localhost:8080/accounts/add?number=121312131&name=omari&type=Credit'
+    curl 'localhost:8080/accounts/add?number=121312131&name=peter&type=Credit'
     
  
  In order to run the 
 
- - tests run 
+ - tests : Simply run 
  
 	■ mvn test
 	
  
- - the application 
+ - the application: Simply run
  
 	■ mvn spring-boot:run
 	
